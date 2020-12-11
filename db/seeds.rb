@@ -46,7 +46,7 @@ puts " 👨🏻‍🎨 Seeding users..."
                 Timesheet.create!(
                 project: project, 
                 date:Faker::Date.forward(days: 90), 
-                hours:rand(0..50), 
+                hours:rand(0..8), 
                 note: "planning"
                 )
     
