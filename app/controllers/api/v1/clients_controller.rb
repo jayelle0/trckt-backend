@@ -11,7 +11,7 @@ class  Api::V1::ClientsController < ApplicationController
       end
   
     def create 
-        @client = Client.create(client_params)
+        client = Client.create(client_params)
         render json: client
 
     end 
@@ -33,6 +33,6 @@ class  Api::V1::ClientsController < ApplicationController
     private
 
     def client_params
-        params.require(:client).permit(:name, :email, :address, :phone)
+        params.require(:client).permit(:name, :email, :address, :phone, :user_id)
     end 
 end

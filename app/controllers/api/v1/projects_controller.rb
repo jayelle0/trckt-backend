@@ -32,7 +32,7 @@ class  Api::V1::ProjectsController < ApplicationController
     private
 
     def project_params
-        params.require(:project).permit(:name, :payment_terms, :hourly_fee) 
+        params.require(:project).permit(:name, :payment_terms, :hourly_fee, :client_id) 
     end 
 
 

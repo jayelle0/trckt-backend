@@ -32,7 +32,7 @@ class  Api::V1::TimesheetsController < ApplicationController
     private
 
     def timesheet_params
-        params.require(:timesheet).permit(:date, :hours, :note) 
+        params.require(:timesheet).permit(:date, :hours, :note, :project_id) 
     end 
 
 end
