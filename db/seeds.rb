@@ -29,7 +29,7 @@ puts " 👨🏻‍🎨 Seeding users..."
     5.times do
         client = Client.create!(
             user: user,
-            name: Faker::Company.unique.name, 
+            name: Faker::Appliance.unique.brand, 
             email: Faker::Internet.unique.email,
             address: Faker::Address.street_address,
             phone: Faker::PhoneNumber.cell_phone
