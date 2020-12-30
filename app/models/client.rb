@@ -11,6 +11,7 @@ class Client < ApplicationRecord
     end 
     return client_total_earned
   end 
+  # currently not included to serializer to determine if needed
 
   def client_completed_earned 
     client_completed_earned = 0 

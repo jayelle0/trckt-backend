@@ -18,7 +18,7 @@ class  Api::V1::ProjectsController < ApplicationController
     def destroy
         project = Project.find(params[:id])
         project.destroy!
-        render json: project
+        render json: project 
       end
     
       def update
