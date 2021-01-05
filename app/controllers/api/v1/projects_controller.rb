@@ -1,4 +1,5 @@
 class  Api::V1::ProjectsController < ApplicationController
+  skip_before_action :authorized, only: [:index, :show]
     def index 
         projects = Project.all
         render json: projects

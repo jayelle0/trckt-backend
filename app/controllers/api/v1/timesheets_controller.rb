@@ -1,4 +1,5 @@
 class  Api::V1::TimesheetsController < ApplicationController
+  skip_before_action :authorized, only: [:index, :show]
     def index 
         timesheets = Timesheet.all
         render json: timesheets

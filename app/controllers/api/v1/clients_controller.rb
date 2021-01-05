@@ -1,4 +1,5 @@
 class  Api::V1::ClientsController < ApplicationController
+  skip_before_action :authorized, only: [:index, :show]
 
     def index 
         clients = Client.all

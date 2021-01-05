@@ -21,7 +21,7 @@ puts " 👨🏻‍🎨 Seeding users..."
    user =User.create!(
         name: "Jacqueline", 
         email: "j@gmail.com",
-        password_digest: "123",
+        password: "123",
         address: "123 fake stret",
         phone: "123-4567"
 

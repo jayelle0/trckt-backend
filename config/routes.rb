@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :projects
       resources :clients
       resources :users
+      post '/login', to: 'auth#create'
     end 
   end 
   
