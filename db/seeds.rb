@@ -21,12 +21,12 @@ puts " 👨🏻‍🎨 Seeding users..."
    user =User.create!(
         name: "Jacqueline", 
         email: "j@gmail.com",
-        password: "123",
+        password: "blue",
         address: "123 fake stret",
         phone: "123-4567"
 
   )
-    5.times do
+    10.times do
         client = Client.create!(
             user: user,
             name: Faker::Appliance.unique.brand, 
@@ -42,12 +42,12 @@ puts " 👨🏻‍🎨 Seeding users..."
             hourly_fee: 150, 
           
             )
-            5.times do
+            15.times do
                 Timesheet.create!(
                 project: project, 
                 date:Faker::Date.forward(days: 90), 
-                hours:rand(0..8), 
-                note: "planning"
+                hours:rand(1..5), 
+                note: "Planning"
                 )
     
             end 

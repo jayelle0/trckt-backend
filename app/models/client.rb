@@ -4,14 +4,6 @@ class Client < ApplicationRecord
 
 
 
-  def client_total_earned 
-    client_total_earned = 0 
-    self.projects.each do |project|
-      client_total_earned+=project.project_total_earned
-    end 
-    return client_total_earned
-  end 
-  # currently not included to serializer to determine if needed
 
   def client_completed_earned 
     client_completed_earned = 0 
